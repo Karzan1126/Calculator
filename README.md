@@ -1,5 +1,4 @@
-# Calculator
-Code for resultant calculation
+
 <html>
 <head>
 <title> Calculator</title>
