@@ -3,18 +3,31 @@
 <title> Calculator</title>
 </head>
 <body>
+    <p>Note:Upward, rightward and clockwise motions are considered positive while others are considered negative</p>
+    <form>
+        <label for="fx">&#x03a3; F<sub>X</sub>: </label>
+        <input name="fx" type="number" id="fx"> <br>
+        <label for="fy">&#x03a3; F<sub>X</sub>: </label>
+        <input name="fy" type="text" id="fy"> <br>
+        <label for="moment"></label>Moment: </label>
+        <input name="moment" type="text" id="moment"> <br>
+        <button type="button" onclick="calculate()">Calculate</button>
+    </form>
 <script>
-document.write("Note:Upward, rightward and clockwise motions are considered positive while others are considered negative");
-var fx = parseInt(prompt("Enter Summation of horizontal forces"));
-var fy = parseInt(prompt("Enter Summation of vertical forces"));
-var m = parseInt(prompt("Enter Summation of moments"));
+function calculate(){
+var fx = parseInt(document.getElementById('fx').value);
+var fy = parseInt(document.getElementById('fy').value);
+var m = parseInt(document.getElementById('moment').value);
+    console.log(fx,fy,m);
 var Rm= Math.sqrt(fx*fx + fy*fy);
 var angle=Math.atan(fy/fx);
 var xint= m/fy;
-var yint = y/fx;
-document.write("Magnitude of resultant force is"+Rm);
-document.write("Inclination of resultant force is"+atan);
-document.write("X Intercept of resultant force is"+xint);
-document.write("Y intercept of resultant force is"+yint);
+var yint = m/fx;
+document.write("Magnitude of resultant force is "+Rm+"<br>");
+document.write("Inclination of resultant force is "+angle+"<br>");
+document.write("X Intercept of resultant force is "+xint+"<br>");
+document.write("Y intercept of resultant force is "+yint+"<br>");
+}
 </script>
-</body></html>
+</body>
+</html>
